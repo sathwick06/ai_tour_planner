@@ -133,63 +133,19 @@ docker run -p 8501:8501 \
 
 Open `http://localhost:8501`
 
-## 📝 Sample Input / Output
+## 🖼️ Sample Outputs
 
-**Input:**
-```
-Plan a 5-day budget trip to Goa under ₹25,000
-```
+### Agent Progress — Live Streaming UI
+![Agent Progress](assets/agent_progress.png)
 
-**Output:**
+### AI-Generated Destination Gallery
+![Destination Gallery](assets/destination_gallery.png)
 
-```
-✈️ Your Travel Plan to Goa
+### Final Travel Plan
+![Final Plan](assets/final_plan.png)
 
-Trip Overview
-- Duration: 5 days
-- Estimated Cost: INR 23,450.00
-- Daily Average: INR 4,690.00
-- Budget Status: Within budget
-
-Destination Highlights
-Goa is India's smallest state, famous for its beaches, nightlife,
-Portuguese heritage, and seafood cuisine.
-
-Best Time to Visit: November to February
-Weather: Tropical — warm and sunny in winter, monsoon Jun–Sep
-
-Top Attractions
-- Baga Beach
-- Anjuna Flea Market
-- Basilica of Bom Jesus
-- Dudhsagar Falls
-- Fort Aguada
-
-Day 1: Arrival & North Goa Beaches
-  09:00 AM - Check in at hostel, Calangute area
-  11:00 AM - Baga Beach — swim and sunbathe (2 hrs)
-  02:00 PM - Lunch at Britto's — Goan fish curry (INR 350)
-  04:00 PM - Calangute Market stroll (1 hr)
-  07:30 PM - Sunset at Anjuna Beach (45 mins)
-  09:00 PM - Dinner at local shack — prawn masala (INR 400)
-  Accommodation: zostel Goa, Calangute
-  Estimated: Food INR 900 | Activities INR 200 | Transport INR 300
-
-Budget Breakdown
-- Accommodation: INR 7,500
-- Food:          INR 6,500
-- Activities:    INR 3,200
-- Transportation:INR 3,750
-- Miscellaneous: INR 2,500
-─────────────────────────
-Total:           INR 23,450
-Status:          Within budget ✅
-
-Money-Saving Tips
-- Eat at local beach shacks instead of tourist restaurants
-- Use rented scooters (INR 300/day) instead of taxis
-- Book accommodation in Calangute or Anjuna (cheaper than Baga)
-```
+### Day-by-Day Itinerary
+![Itinerary](assets/itinerary.png)
 
 ## 🎯 Key Features
 
