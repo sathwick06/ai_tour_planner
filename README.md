@@ -114,6 +114,10 @@ Open `http://localhost:8501`
 ### Final Travel Plan
 ![Final Plan](assets/final_plan.png)
 
+### 📄 Sample Generated PDFs
+
+Sample travel plan PDFs for Delhi and North East India are available in the [`assets/`](assets/) folder.
+
 ## 🎯 Key Features
 
 - Multi-agent collaboration with real inter-agent data dependency
