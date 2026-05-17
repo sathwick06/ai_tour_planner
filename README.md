@@ -114,6 +114,9 @@ Open `http://localhost:8501`
 ### Final Travel Plan
 ![Final Plan](assets/final_plan.png)
 
+### Day-by-Day Itinerary
+![Itinerary](assets/itinerary.png)
+
 ### 📄 Sample Generated PDFs
 
 Generated plans can be downloaded as PDF. Some sample outputs are available in the [`assets/`](assets/) folder.
