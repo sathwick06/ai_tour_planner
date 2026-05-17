@@ -6,57 +6,27 @@ An AI-powered travel planning system using LangGraph, Anthropic, Gemini, and Str
 
 The system uses a **sequential multi-agent pipeline** orchestrated by LangGraph. Each agent receives the output of the previous one via a shared state object (`TravelPlanState`).
 
-```
-┌─────────────────────────────────────────────────────────────┐
-│                        Streamlit UI                         │
-│              (user input + live agent progress)             │
-└──────────────────────────┬──────────────────────────────────┘
-                           │
-                           ▼
-┌─────────────────────────────────────────────────────────────┐
-│               LangGraph Orchestrator (StateGraph)           │
-│                   shared: TravelPlanState                   │
-└──────────────────────────┬──────────────────────────────────┘
-                           │
-          ┌────────────────▼────────────────┐
-          │         1. Intent Agent          │
-          │  Extracts destination, budget,   │
-          │  duration, currency, preferences │
-          └────────────────┬────────────────┘
-                           │  trip_details →
-          ┌────────────────▼────────────────┐
-          │        2. Research Agent         │
-          │  Fetches real data via           │
-          │  API Ninjas + Wikipedia REST     │
-          └────────────────┬────────────────┘
-                           │  research_data →
-          ┌────────────────▼────────────────┐
-          │        3. Itinerary Agent        │
-          │  Generates day-wise plan with    │
-          │  activities, meals, hotels       │
-          └────────────────┬────────────────┘
-                           │  itinerary →
-          ┌────────────────▼────────────────┐
-          │         4. Budget Agent          │
-          │  Estimates realistic costs in    │
-          │  user's own currency             │
-          └────────────────┬────────────────┘
-                           │  budget_breakdown →
-          ┌────────────────▼────────────────┐
-          │        5. Compile Plan           │
-          │  Assembles all outputs into      │
-          │  final structured travel plan    │
-          └────────────────┬────────────────┘
-                           │  final_plan →
-          ┌────────────────▼────────────────┐
-          │         6. Image Agent           │
-          │  Generates destination photos    │
-          │  via Google Gemini (bonus)       │
-          └────────────────┬────────────────┘
-                           │
-                           ▼
-                   📋 Final Travel Plan
-          (itinerary + budget + tips + images)
+```mermaid
+%%{init: {'flowchart': {'curve': 'linear'}}}%%
+graph TD;
+	__start__([<p>__start__</p>]):::first
+	intent_agent(intent_agent)
+	research_agent(research_agent)
+	itinerary_agent(itinerary_agent)
+	budget_agent(budget_agent)
+	compile_plan(compile_plan)
+	image_agent(image_agent)
+	__end__([<p>__end__</p>]):::last
+	__start__ --> intent_agent;
+	intent_agent --> research_agent;
+	research_agent --> itinerary_agent;
+	itinerary_agent --> budget_agent;
+	budget_agent --> compile_plan;
+	compile_plan --> image_agent;
+	image_agent --> __end__;
+	classDef default fill:#f2f0ff,line-height:1.2
+	classDef first fill-opacity:0
+	classDef last fill:#bfb6fc
 ```
 
 ## 📋 Agents
@@ -143,9 +113,6 @@ Open `http://localhost:8501`
 
 ### Final Travel Plan
 ![Final Plan](assets/final_plan.png)
-
-### Day-by-Day Itinerary
-![Itinerary](assets/itinerary.png)
 
 ## 🎯 Key Features
 
