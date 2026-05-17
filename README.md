@@ -116,7 +116,7 @@ Open `http://localhost:8501`
 
 ### 📄 Sample Generated PDFs
 
-Sample travel plan PDFs for Delhi and North East India are available in the [`assets/`](assets/) folder.
+Generated plans can be downloaded as PDF. Some sample outputs are available in the [`assets/`](assets/) folder.
 
 ## 🎯 Key Features
 
